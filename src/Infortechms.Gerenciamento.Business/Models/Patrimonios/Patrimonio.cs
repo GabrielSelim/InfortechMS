@@ -1,5 +1,6 @@
 ﻿using System;
 using Infortechms.Gerenciamento.Business.Core.Models;
+using Infortechms.Gerenciamento.Business.Models.Aquisicoes;
 
 namespace Infortechms.Gerenciamento.Business.Models.Patrimonios
 {
@@ -16,7 +17,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Patrimonios
         public int Fk_Aquisicao { get; set; }
 
         /*EF Relations*/
-        public Aquisicoes Aquisicoes { get; set; }
+        public Aquisicao Aquisicoes { get; set; }
             
     }
 }
