@@ -6,6 +6,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Patrimonios
 {
     public class Patrimonio : Entity
     {
+        public int Fk_Aquisicao { get; set; }
         public int NumeroPatrimonio { get; set; }
         public string Descricao { get; set; }
         public string Marca { get; set; }
@@ -14,7 +15,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Patrimonios
         public DateTime DataGarantia { get; set; }
         public decimal Valor { get; set; }
         public bool Status { get; set; }
-        public int Fk_Aquisicao { get; set; }
 
         /*EF Relations*/
         public Aquisicao Aquisicoes { get; set; }

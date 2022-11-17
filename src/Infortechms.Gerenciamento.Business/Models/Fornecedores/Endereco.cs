@@ -1,4 +1,5 @@
 ﻿using Infortechms.Gerenciamento.Business.Core.Models;
+using Infortechms.Gerenciamento.Business.Models.Funcionarios;
 
 namespace Infortechms.Gerenciamento.Business.Models.Fornecedores
 {
@@ -14,6 +15,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Fornecedores
 
         /* EF Relations */
         public Fornecedor Fornecedor { get; set; }
+        public Funcionario Funcionario { get; set; }
 
     }
 }
