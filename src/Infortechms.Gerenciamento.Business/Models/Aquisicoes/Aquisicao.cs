@@ -2,6 +2,7 @@
 using Infortechms.Gerenciamento.Business.Core.Models;
 using Infortechms.Gerenciamento.Business.Models.Fornecedores;
 using Infortechms.Gerenciamento.Business.Models.Funcionarios;
+using Infortechms.Gerenciamento.Business.Models.FuncionariosPatrimonios;
 
 namespace Infortechms.Gerenciamento.Business.Models.Aquisicoes
 {
@@ -13,7 +14,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Aquisicoes
         public int Fk_Funcionario { get; set; }
 
         /* EF Relations */
-        public ICollection<Fornecedor> Fornecedor { get; set; }
-        public ICollection<Funcionario> Funcionario { get; set; }
+        public ICollection<FuncionarioPatrimonio> FuncionarioPatrimonios { get; set; }
     }
 }

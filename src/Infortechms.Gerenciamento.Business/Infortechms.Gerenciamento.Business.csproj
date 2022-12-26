@@ -34,18 +34,29 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Data\IRepository.cs" />
     <Compile Include="Core\Models\Entity.cs" />
     <Compile Include="Models\Aquisicoes\Aquisicao.cs" />
+    <Compile Include="Models\Aquisicoes\IAquisicaoRepository.cs" />
     <Compile Include="Models\Fornecedores\Endereco.cs" />
     <Compile Include="Models\Fornecedores\Fornecedor.cs" />
+    <Compile Include="Models\Fornecedores\IEnderecoRepository.cs" />
+    <Compile Include="Models\Fornecedores\IFornecedorRepository.cs" />
     <Compile Include="Models\Fornecedores\TipoFornecedor.cs" />
     <Compile Include="Models\FuncionariosPatrimonios\FuncionarioPatrimonio.cs" />
+    <Compile Include="Models\FuncionariosPatrimonios\IFuncionarioPatrimonioRepository.cs" />
     <Compile Include="Models\Funcionarios\Funcionario.cs" />
+    <Compile Include="Models\Funcionarios\IFuncionarioRepository.cs" />
     <Compile Include="Models\Funcoes\Funcao.cs" />
+    <Compile Include="Models\Funcoes\IFuncaoRepository.cs" />
     <Compile Include="Models\HistoricosCargos\HistoricoCargo.cs" />
+    <Compile Include="Models\HistoricosCargos\IHistoricoCargoRepository.cs" />
+    <Compile Include="Models\Patrimonios\IPatrimonioRepository.cs" />
     <Compile Include="Models\Patrimonios\Patrimonio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\Produto\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
