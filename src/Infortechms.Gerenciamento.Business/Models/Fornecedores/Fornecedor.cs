@@ -1,6 +1,8 @@
 ﻿using Infortechms.Gerenciamento.Business.Core.Models;
 using Infortechms.Gerenciamento.Business.Models.Patrimonios;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infortechms.Gerenciamento.Business.Models.Fornecedores
 {
@@ -12,6 +14,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Fornecedores
         public Endereco Endereco { get; set; }
         public bool Ativo { get; set; }
         public int Telefone { get; set; }
+        [EmailAddress]
         public string Email { get; set; }
         public string site { get; set; }
 

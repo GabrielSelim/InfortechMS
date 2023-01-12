@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="Data\Context\InfortechMSContext.cs" />
     <Compile Include="Data\Mappings\FornecedorConfig.cs" />
+    <Compile Include="Data\Mappings\FuncaoConfig.cs" />
+    <Compile Include="Data\Mappings\FuncionarioConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
