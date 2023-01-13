@@ -3,6 +3,7 @@ using Infortechms.Gerenciamento.Business.Models.Patrimonios;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Infortechms.Gerenciamento.Business.Models.Aquisicoes;
 
 namespace Infortechms.Gerenciamento.Business.Models.Fornecedores
 {
@@ -20,5 +21,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Fornecedores
 
         /* EF Relations */
         public ICollection<Patrimonio> Patrimonios { get; set; }
+        public Aquisicao Aquisicao { get; set; }
     }
 }

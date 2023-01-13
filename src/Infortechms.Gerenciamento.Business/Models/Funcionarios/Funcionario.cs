@@ -1,6 +1,9 @@
 ﻿using System;
 using Infortechms.Gerenciamento.Business.Core.Models;
+using Infortechms.Gerenciamento.Business.Models.Aquisicoes;
 using Infortechms.Gerenciamento.Business.Models.Fornecedores;
+using Infortechms.Gerenciamento.Business.Models.FuncionariosPatrimonios;
+using Infortechms.Gerenciamento.Business.Models.HistoricoCargos;
 
 namespace Infortechms.Gerenciamento.Business.Models.Funcionarios
 {
@@ -16,6 +19,11 @@ namespace Infortechms.Gerenciamento.Business.Models.Funcionarios
         public string site { get; set; }
         public DateTime DataAdmissao { get; set; }
         public DateTime DataDesligamento { get; set; }
+
+
+        public Aquisicao Aquisicao { get; set; }
+        public FuncionarioPatrimonio FuncionarioPatrimonio { get; set; }
+        public HistoricosCargo HistoricosCargo { get; set; }
 
     }
 }

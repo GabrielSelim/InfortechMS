@@ -52,9 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Context\InfortechMSContext.cs" />
+    <Compile Include="Data\Mappings\AquisicaoConfig.cs" />
+    <Compile Include="Data\Mappings\EnderecoConfig.cs" />
     <Compile Include="Data\Mappings\FornecedorConfig.cs" />
     <Compile Include="Data\Mappings\FuncaoConfig.cs" />
     <Compile Include="Data\Mappings\FuncionarioConfig.cs" />
+    <Compile Include="Data\Mappings\FuncionarioPatrimonioConfig.cs" />
+    <Compile Include="Data\Mappings\HistoricoCargoConfig.cs" />
+    <Compile Include="Data\Mappings\PatrimonioConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

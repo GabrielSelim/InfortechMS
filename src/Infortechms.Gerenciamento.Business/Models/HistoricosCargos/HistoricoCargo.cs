@@ -8,8 +8,8 @@ namespace Infortechms.Gerenciamento.Business.Models.HistoricoCargos
 {
     public class HistoricosCargo : Entity
     {
-        public Guid FK_Funcao { get; set; }
-        public Guid FK_Funcionario { get; set; }
+        public Funcao FK_Funcao { get; set; }
+        public Funcionario FK_Funcionario { get; set; }
         public decimal Salario { get; set; }
         public DateTime DataInicial { get; set; }
         public DateTime DataFinal { get; set; }
