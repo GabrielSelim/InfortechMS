@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Infortechms.Gerenciamento.Business.Core.Data;
+using Infortechms.Gerenciamento.Business.Core.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +10,11 @@ namespace Infortechms.Gerenciamento.AppMvc.Controllers
 {
     public class HomeController : Controller
     {
+        private IRodarVeiculoService rodarVeiculoService;
+
         public ActionResult Index()
         {
-            return View();
+            return View();            
         }
 
         public ActionResult About()
@@ -25,6 +29,12 @@ namespace Infortechms.Gerenciamento.AppMvc.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+
+        public void CriarViewBagAbastecer()
+        {
+
         }
     }
 }

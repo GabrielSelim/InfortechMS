@@ -31,12 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.9.2.2\lib\net461\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Data\IRepository.cs" />
     <Compile Include="Core\Models\Entity.cs" />
+    <Compile Include="Core\Services\BaseService.cs" />
+    <Compile Include="Core\Services\IRodarVeiculoService.cs" />
+    <Compile Include="Core\Services\RodarVeiculoService.cs" />
     <Compile Include="Models\Abastecimentos\IAbastecerRepository.cs" />
     <Compile Include="Models\Aquisicoes\Aquisicao.cs" />
     <Compile Include="Models\Aquisicoes\IAquisicaoRepository.cs" />
@@ -63,11 +69,15 @@
     <Compile Include="Models\Patrimonios\Patrimonio.cs" />
     <Compile Include="Models\RodarVeiculos\IRodarVeiculoRepository.cs" />
     <Compile Include="Models\RodarVeiculos\RodarVeiculo.cs" />
+    <Compile Include="Models\RodarVeiculos\Validations\RodarVeiculoValidation.cs" />
     <Compile Include="Models\Veiculos\Veiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Produto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
