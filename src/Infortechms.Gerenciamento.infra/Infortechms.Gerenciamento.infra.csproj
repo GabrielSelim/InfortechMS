@@ -67,6 +67,10 @@
     <Compile Include="Data\Mappings\PatrimonioConfig.cs" />
     <Compile Include="Data\Mappings\RodarVeiculoMapping.cs" />
     <Compile Include="Data\Mappings\VeiculoMapping.cs" />
+    <Compile Include="Data\Migrations\Configuration.cs" />
+    <Compile Include="Data\Repository\AbastecerRepository.cs" />
+    <Compile Include="Data\Repository\Repository.cs" />
+    <Compile Include="Data\Repository\TesteRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

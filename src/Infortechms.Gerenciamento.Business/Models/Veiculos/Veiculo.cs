@@ -15,6 +15,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Veiculos
         public decimal MediaConsumo { get; set; }
 
         /* EF Relations */
-        public ICollection<RodarVeiculo> RodarVeiculo { get; set; }
+        public RodarVeiculo RodarVeiculo { get; set; }
     }
 }

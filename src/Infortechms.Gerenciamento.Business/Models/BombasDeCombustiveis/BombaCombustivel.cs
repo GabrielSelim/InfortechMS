@@ -18,6 +18,6 @@ namespace Infortechms.Gerenciamento.Business.Models.BombasDeCombustiveis
 
 
         /*EF Relations*/
-        public ICollection<Abastecer> Abastecer { get; set; }
+        public Abastecer Abastecer { get; set; }
     }
 }
