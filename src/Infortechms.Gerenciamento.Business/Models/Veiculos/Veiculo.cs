@@ -1,12 +1,7 @@
-﻿using Infortechms.Gerenciamento.Business.Core.Models;
-using Infortechms.Gerenciamento.Business.Models.BombasDeCombustiveis;
+﻿using System.Collections.Generic;
+using Infortechms.Gerenciamento.Business.Core.Models;
 using Infortechms.Gerenciamento.Business.Models.Consumidores;
 using Infortechms.Gerenciamento.Business.Models.RodarVeiculos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infortechms.Gerenciamento.Business.Models.Veiculos
 {
@@ -20,6 +15,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Veiculos
         public decimal MediaConsumo { get; set; }
 
         /* EF Relations */
-        public RodarVeiculo RodarVeiculo { get; set; }
+        public ICollection<RodarVeiculo> RodarVeiculo { get; set; }
     }
 }

@@ -18,7 +18,6 @@ namespace Infortechms.Gerenciamento.Business.Models.BombasDeCombustiveis
 
 
         /*EF Relations*/
-        public Consumidor Consumidor { get; set; }
-        public Abastecer Abastecer { get; set; }
+        public ICollection<Abastecer> Abastecer { get; set; }
     }
 }

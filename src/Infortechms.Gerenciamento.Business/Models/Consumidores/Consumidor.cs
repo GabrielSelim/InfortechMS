@@ -19,7 +19,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Consumidores
         public int Telefone { get; set; }
 
         /* EF Relations */
-        public Veiculo Veiculo { get; set; }
+        public ICollection<Veiculo> Veiculo { get; set; }
         public ICollection<Abastecer> Abastecer { get; set; }
 
     }

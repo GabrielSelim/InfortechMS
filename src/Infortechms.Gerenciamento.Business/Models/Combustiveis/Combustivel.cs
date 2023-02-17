@@ -18,6 +18,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Combustiveis
 
 
         /*EF Relations*/
-        public BombaCombustivel BombaCombustivel { get; set; }
+        public ICollection<BombaCombustivel> BombaCombustivel { get; set; }
     }
 }

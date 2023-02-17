@@ -15,7 +15,8 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
             HasKey(f => f.Id);
 
             HasRequired(f => f.Fk_Consumidor)
-                  .WithRequiredPrincipal(e => e.Veiculo);
+                .WithMany(e => e.Veiculo)
+                .HasForeignKey(f => f.Fk_Consumidor);
 
             Property(x => x.Chassi)
                 .IsOptional();

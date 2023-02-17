@@ -10,7 +10,8 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
             HasKey(x => x.Id);
 
             HasRequired(f => f.Fk_Veiculo)
-                .WithRequiredPrincipal(e => e.RodarVeiculo);
+                .WithMany(e => e.RodarVeiculo)
+                .HasForeignKey(f => f.Fk_Veiculo);
 
             HasRequired(f => f.Fk_Abastecer)
                 .WithOptional(e => e.RodarVeiculo);
@@ -26,6 +27,9 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
 
             Property(x => x.LitrosConsumidos)
                 .IsRequired();
+
+
+            ToTable("RodarVeiculos");
         }
     }
 }
