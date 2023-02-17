@@ -17,7 +17,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Combustiveis
         public int Pureza { get; set; }
 
 
-
         /*EF Relations*/
         public BombaCombustivel BombaCombustivel { get; set; }
     }

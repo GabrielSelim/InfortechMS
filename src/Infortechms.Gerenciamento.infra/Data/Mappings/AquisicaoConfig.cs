@@ -22,7 +22,7 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
             HasRequired(f => f.Fk_Fornecedor)
                 .WithRequiredPrincipal(e => e.Aquisicao);
 
-            HasRequired(f=>f.Fk_Funcionario)
+            HasRequired(f => f.Fk_Funcionario)
                 .WithRequiredPrincipal(e => e.Aquisicao);
             
 
