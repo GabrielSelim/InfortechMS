@@ -39,6 +39,10 @@
     <Compile Include="Core\Models\Entity.cs" />
     <Compile Include="Models\Aquisicoes\Aquisicao.cs" />
     <Compile Include="Models\Aquisicoes\IAquisicaoRepository.cs" />
+    <Compile Include="Models\BombasDeCombustiveis\BombaCombustivel.cs" />
+    <Compile Include="Models\VeiculosConsumidores\VeiculoConsumidor.cs" />
+    <Compile Include="Models\Combustiveis\Combustivel.cs" />
+    <Compile Include="Models\Consumidores\Consumidor.cs" />
     <Compile Include="Models\Fornecedores\Endereco.cs" />
     <Compile Include="Models\Fornecedores\Fornecedor.cs" />
     <Compile Include="Models\Fornecedores\IEnderecoRepository.cs" />
@@ -54,6 +58,7 @@
     <Compile Include="Models\HistoricosCargos\IHistoricoCargoRepository.cs" />
     <Compile Include="Models\Patrimonios\IPatrimonioRepository.cs" />
     <Compile Include="Models\Patrimonios\Patrimonio.cs" />
+    <Compile Include="Models\Veiculos\Veiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
