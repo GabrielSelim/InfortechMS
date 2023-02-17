@@ -14,15 +14,16 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
         {
             HasKey(f => f.Id);
 
-            HasRequired(f => f.Fk_BombaCombustivel)
-                 .WithRequiredPrincipal(e => e.Abastecer);
+        //    HasRequired(f => f.Fk_BombaCombustivel)
+          //       .WithRequiredPrincipal(e => e.Abastecer);
 
-            HasRequired(f => f.Fk_Consumidor)
-                 .WithRequiredPrincipal(e => e.Abastecer);
+            HasRequired(p => p.Fk_Consumidor)
+                 .WithMany(f => f.Abastecer)
+                 .HasForeignKey(c =>c.Fk_Consumidor);
 
             Property(x => x.QuantidadeLitros)
                 .IsRequired();
-
+            
 
             ToTable("Abastecer");
         }
