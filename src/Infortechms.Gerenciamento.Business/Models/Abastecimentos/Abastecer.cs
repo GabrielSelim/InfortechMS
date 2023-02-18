@@ -1,4 +1,5 @@
 ﻿using Infortechms.Gerenciamento.Business.Core.Models;
+using Infortechms.Gerenciamento.Business.Models.Abastecimentos.Validations;
 using Infortechms.Gerenciamento.Business.Models.BombasDeCombustiveis;
 using Infortechms.Gerenciamento.Business.Models.Consumidores;
 using Infortechms.Gerenciamento.Business.Models.Pagamentos;
@@ -26,5 +27,14 @@ namespace Infortechms.Gerenciamento.Business.Models.Abastecimentos
         /*EF Relations Pega*/
         public Consumidor Consumidor { get; set; }
         public BombaCombustivel BombaCombustivel { get; set; }    
+
+
+        public bool Validacao()
+        {
+            var validacao = new AbastecerValidation();
+            var resultado = validacao.Validate(this);
+            return resultado.IsValid;
+        }
+
     }
 }

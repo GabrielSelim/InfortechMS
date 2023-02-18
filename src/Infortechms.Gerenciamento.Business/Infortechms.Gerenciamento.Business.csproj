@@ -40,17 +40,25 @@
   <ItemGroup>
     <Compile Include="Core\Data\IRepository.cs" />
     <Compile Include="Core\Models\Entity.cs" />
+    <Compile Include="Core\Services\AbastecerService.cs" />
     <Compile Include="Core\Services\BaseService.cs" />
+    <Compile Include="Core\Services\IAbastecerService.cs" />
     <Compile Include="Core\Services\IRodarVeiculoService.cs" />
     <Compile Include="Core\Services\RodarVeiculoService.cs" />
     <Compile Include="Models\Abastecimentos\IAbastecerRepository.cs" />
+    <Compile Include="Models\Abastecimentos\Validations\AbastecerValidation.cs" />
     <Compile Include="Models\Aquisicoes\Aquisicao.cs" />
     <Compile Include="Models\Aquisicoes\IAquisicaoRepository.cs" />
     <Compile Include="Models\BombasDeCombustiveis\BombaCombustivel.cs" />
     <Compile Include="Models\Abastecimentos\Abastecer.cs" />
     <Compile Include="Models\BombasDeCombustiveis\IBombaCombustivelRepository.cs" />
+    <Compile Include="Models\BombasDeCombustiveis\Validations\BombaCombustivelValidation.cs" />
     <Compile Include="Models\Combustiveis\Combustivel.cs" />
+    <Compile Include="Models\Combustiveis\ICombustivelRepository.cs" />
+    <Compile Include="Models\Combustiveis\Validations\CombustivelValidation.cs" />
     <Compile Include="Models\Consumidores\Consumidor.cs" />
+    <Compile Include="Models\Consumidores\IConsumidorRepository.cs" />
+    <Compile Include="Models\Consumidores\Validations\ConsumidorValidations.cs" />
     <Compile Include="Models\Fornecedores\Endereco.cs" />
     <Compile Include="Models\Fornecedores\Fornecedor.cs" />
     <Compile Include="Models\Fornecedores\IEnderecoRepository.cs" />
@@ -64,12 +72,16 @@
     <Compile Include="Models\Funcoes\IFuncaoRepository.cs" />
     <Compile Include="Models\HistoricosCargos\HistoricoCargo.cs" />
     <Compile Include="Models\HistoricosCargos\IHistoricoCargoRepository.cs" />
+    <Compile Include="Models\Pagamentos\IPagamentoRepository.cs" />
     <Compile Include="Models\Pagamentos\Pagamento.cs" />
+    <Compile Include="Models\Pagamentos\Validation\PagamentoValidations.cs" />
     <Compile Include="Models\Patrimonios\IPatrimonioRepository.cs" />
     <Compile Include="Models\Patrimonios\Patrimonio.cs" />
     <Compile Include="Models\RodarVeiculos\IRodarVeiculoRepository.cs" />
     <Compile Include="Models\RodarVeiculos\RodarVeiculo.cs" />
     <Compile Include="Models\RodarVeiculos\Validations\RodarVeiculoValidation.cs" />
+    <Compile Include="Models\Veiculos\IVeiculoRepository.cs" />
+    <Compile Include="Models\Veiculos\Validations\VeiculoValidations.cs" />
     <Compile Include="Models\Veiculos\Veiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
