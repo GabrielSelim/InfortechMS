@@ -9,11 +9,13 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
         {
             HasKey(x => x.Id);
 
-            HasRequired(f => f.Fk_Veiculo)
-                .WithRequiredPrincipal(e => e.RodarVeiculo);
+            HasRequired(f => f.Veiculo)
+                .WithMany(e => e.RodarVeiculo)
+                .HasForeignKey(p=>p.Fk_Veiculo);
 
-            HasRequired(f => f.Fk_Abastecer)
-                .WithOptional(e => e.RodarVeiculo);
+            HasRequired(f => f.Abastecer)
+                .WithMany(e => e.RodarVeiculo)
+                .HasForeignKey(p=>p.Fk_Abastecer);
 
             Property(x => x.ValorDaGasolina)
                 .IsOptional();

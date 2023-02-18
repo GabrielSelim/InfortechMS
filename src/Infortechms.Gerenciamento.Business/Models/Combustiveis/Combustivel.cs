@@ -12,12 +12,16 @@ namespace Infortechms.Gerenciamento.Business.Models.Combustiveis
 {
     public class Combustivel : Entity
     {
+        public Guid Id { get; set; }
         public decimal Valor { get; set; }
         public string TipoCombustivel { get; set; }
         public int Pureza { get; set; }
 
 
-        /*EF Relations*/
-        public BombaCombustivel BombaCombustivel { get; set; }
+        /*EF Relations Envia*/
+        public ICollection<BombaCombustivel> BombaCombustivel { get; set; }
+
+        /*EF Relations Pega*/
+
     }
 }

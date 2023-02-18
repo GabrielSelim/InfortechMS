@@ -13,12 +13,18 @@ namespace Infortechms.Gerenciamento.Business.Models.Abastecimentos
 {
     public class Abastecer : Entity
     {
+        public Guid Id { get; set; }
+        public Guid Fk_BombaCombustivel { get; set; }
+        public Guid Fk_Consumidor { get; set; }
         public decimal QuantidadeLitros { get; set; }
-        public BombaCombustivel Fk_BombaCombustivel { get; set; }
-        public Consumidor Fk_Consumidor { get; set; }
 
-        /* EF Relations */
-        public Pagamento Pagamento { get; set; }
-        public RodarVeiculo RodarVeiculo { get;set; }
+
+        /*EF Relations Envia*/
+        public ICollection<Pagamento> Pagamento { get; set; }
+        public ICollection<RodarVeiculo> RodarVeiculo { get;set; }
+
+        /*EF Relations Pega*/
+        public Consumidor Consumidor { get; set; }
+        public BombaCombustivel BombaCombustivel { get; set; }    
     }
 }

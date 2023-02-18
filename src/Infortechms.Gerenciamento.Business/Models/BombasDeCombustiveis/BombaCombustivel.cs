@@ -18,7 +18,10 @@ namespace Infortechms.Gerenciamento.Business.Models.BombasDeCombustiveis
         public decimal LitrosNoTanqueJaquetado { get; set; }
 
 
-        /*EF Relations*/
-        public Abastecer Abastecer { get; set; }
+        /*EF Relations Envia*/
+        public ICollection<Abastecer> Abastecer { get; set; }
+
+        /*EF Relations Pega*/
+        public Combustivel Combustivel { get; set; }
     }
 }
