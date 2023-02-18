@@ -13,7 +13,6 @@ namespace Infortechms.Gerenciamento.Business.Models.BombasDeCombustiveis
 {
     public class BombaCombustivel : Entity
     {
-        public Guid id { get; set; }
         public Guid Fk_Combustivel { get; set; }
         public decimal LitrosNoTanqueJaquetado { get; set; }
 

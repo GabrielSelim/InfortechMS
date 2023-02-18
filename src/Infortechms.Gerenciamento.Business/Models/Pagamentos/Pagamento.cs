@@ -11,7 +11,14 @@ namespace Infortechms.Gerenciamento.Business.Models.Pagamentos
 {
     public class Pagamento : Entity
     {
-        public Abastecer Fk_Abastecimento { get; set; }
+        public Guid Fk_Abastecimento { get; set; }
         public decimal ValorTotal { get; set; }
+
+
+        /*EF Relations Envia*/
+
+        /*EF Relations Pega*/
+        public Abastecer Abastecer { get; set; }
+
     }
 }

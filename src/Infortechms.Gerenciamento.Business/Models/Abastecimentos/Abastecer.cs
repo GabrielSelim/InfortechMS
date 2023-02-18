@@ -21,7 +21,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Abastecimentos
 
         /*EF Relations Envia*/
         public ICollection<Pagamento> Pagamento { get; set; }
-        public ICollection<RodarVeiculo> RodarVeiculo { get;set; }
+        public ICollection<RodarVeiculo> RodarVeiculo { get; set; }
 
         /*EF Relations Pega*/
         public Consumidor Consumidor { get; set; }

@@ -13,7 +13,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Consumidores
 {
     public class Consumidor : Entity
     {
-        public Guid id { get; set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
         public DateTime DataNascimento { get; set; }

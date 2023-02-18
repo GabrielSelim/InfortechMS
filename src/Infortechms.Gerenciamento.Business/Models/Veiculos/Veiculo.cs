@@ -8,7 +8,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Veiculos
 {
     public class Veiculo : Entity
     {
-        public Guid guid { get; set; }
         public Guid Fk_Consumidor { get; set; }
         public string Chassi { get; set; }
         public string Placa { get; set; }

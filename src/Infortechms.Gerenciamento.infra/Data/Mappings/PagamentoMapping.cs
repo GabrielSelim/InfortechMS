@@ -9,8 +9,9 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
         {
             HasKey(x => x.Id);
 
-            HasRequired(f => f.Fk_Abastecimento)
-                 .WithRequiredPrincipal(e => e.Pagamento);
+            HasRequired(f => f.Abastecer)
+                 .WithMany(e => e.Pagamento)
+                 .HasForeignKey(f=>f.Fk_Abastecimento);
 
             Property(x => x.ValorTotal)
                  .IsRequired();
