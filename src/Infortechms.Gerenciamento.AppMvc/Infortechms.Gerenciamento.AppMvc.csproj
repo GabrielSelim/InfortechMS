@@ -245,6 +245,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Abastecer\" />
     <Folder Include="Views\Consumidor\" />
+    <Folder Include="Views\dwdw\" />
     <Folder Include="Views\Veiculo\" />
   </ItemGroup>
   <ItemGroup>

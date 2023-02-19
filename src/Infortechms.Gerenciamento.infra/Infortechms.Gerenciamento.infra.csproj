@@ -52,30 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Context\InfortechMSContext.cs" />
-    <Compile Include="Data\Mappings\AbastecerMapping.cs" />
-    <Compile Include="Data\Mappings\AquisicaoConfig.cs" />
-    <Compile Include="Data\Mappings\BombaDeCombustivelMapping.cs" />
-    <Compile Include="Data\Mappings\CombustivelMapping.cs" />
-    <Compile Include="Data\Mappings\ConsumidorMapping.cs" />
-    <Compile Include="Data\Mappings\EnderecoConfig.cs" />
-    <Compile Include="Data\Mappings\FornecedorConfig.cs" />
-    <Compile Include="Data\Mappings\FuncaoConfig.cs" />
-    <Compile Include="Data\Mappings\FuncionarioConfig.cs" />
-    <Compile Include="Data\Mappings\FuncionarioPatrimonioConfig.cs" />
-    <Compile Include="Data\Mappings\HistoricoCargoConfig.cs" />
-    <Compile Include="Data\Mappings\PagamentoMapping.cs" />
-    <Compile Include="Data\Mappings\PatrimonioConfig.cs" />
-    <Compile Include="Data\Mappings\RodarVeiculoMapping.cs" />
-    <Compile Include="Data\Mappings\VeiculoMapping.cs" />
-    <Compile Include="Data\Repository\AbastecerRepository.cs" />
-    <Compile Include="Data\Repository\BombaCombustivelRepository.cs" />
-    <Compile Include="Data\Repository\CombustivelRepository.cs" />
-    <Compile Include="Data\Repository\ConsumidorRepository.cs" />
-    <Compile Include="Data\Repository\PagamentoRepository.cs" />
+    <Compile Include="Data\Mappings\ConsumoCombustivelMapping.cs" />
+    <Compile Include="Data\Repository\ConsumoCombustivelRepository.cs" />
     <Compile Include="Data\Repository\Repository.cs" />
-    <Compile Include="Data\Repository\RodarVeiculoRepository.cs" />
-    <Compile Include="Data\Repository\TesteRepository.cs" />
-    <Compile Include="Data\Repository\VeiculoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
