@@ -17,6 +17,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Combustiveis.Validations
 
             RuleFor(f => f.Valor)
                 .NotEmpty()
+                .GreaterThan(0)
                 .WithMessage("O campo {PropertyValue} precisa ser fornecido");
         }
     }

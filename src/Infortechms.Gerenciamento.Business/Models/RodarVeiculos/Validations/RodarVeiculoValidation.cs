@@ -8,6 +8,7 @@ namespace Infortechms.Gerenciamento.Business.Models.RodarVeiculos.Validations
         {
             RuleFor(f => f.KmRodados)
                 .NotEmpty()
+                .GreaterThan(0)
                 .WithMessage("O Campo {PropertyValue} precisa ser fornecido");
         }
     }

@@ -9,6 +9,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Consumidores
 {
     public interface IConsumidorRepository : IRepository<Consumidor>
     {
-
+        Task<Consumidor> ObterConsumidorPorID(Guid id);
     }
 }

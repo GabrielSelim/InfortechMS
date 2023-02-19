@@ -42,9 +42,19 @@
     <Compile Include="Core\Models\Entity.cs" />
     <Compile Include="Core\Services\AbastecerService.cs" />
     <Compile Include="Core\Services\BaseService.cs" />
+    <Compile Include="Core\Services\BombaCombustivelService.cs" />
+    <Compile Include="Core\Services\CombustivelService.cs" />
+    <Compile Include="Core\Services\ConsumidorService.cs" />
     <Compile Include="Core\Services\IAbastecerService.cs" />
+    <Compile Include="Core\Services\IBombaCombustivelService.cs" />
+    <Compile Include="Core\Services\ICombustivelService.cs" />
+    <Compile Include="Core\Services\IConsumidorService.cs" />
+    <Compile Include="Core\Services\IPagamentoService.cs" />
     <Compile Include="Core\Services\IRodarVeiculoService.cs" />
+    <Compile Include="Core\Services\IVeiculoService.cs" />
+    <Compile Include="Core\Services\PagamentoService.cs" />
     <Compile Include="Core\Services\RodarVeiculoService.cs" />
+    <Compile Include="Core\Services\VeiculoService.cs" />
     <Compile Include="Models\Abastecimentos\IAbastecerRepository.cs" />
     <Compile Include="Models\Abastecimentos\Validations\AbastecerValidation.cs" />
     <Compile Include="Models\Aquisicoes\Aquisicao.cs" />
@@ -55,6 +65,7 @@
     <Compile Include="Models\BombasDeCombustiveis\Validations\BombaCombustivelValidation.cs" />
     <Compile Include="Models\Combustiveis\Combustivel.cs" />
     <Compile Include="Models\Combustiveis\ICombustivelRepository.cs" />
+    <Compile Include="Models\Combustiveis\TipoCombustivel.cs" />
     <Compile Include="Models\Combustiveis\Validations\CombustivelValidation.cs" />
     <Compile Include="Models\Consumidores\Consumidor.cs" />
     <Compile Include="Models\Consumidores\IConsumidorRepository.cs" />

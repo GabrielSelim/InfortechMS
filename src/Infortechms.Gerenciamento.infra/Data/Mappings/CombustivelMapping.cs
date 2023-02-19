@@ -15,7 +15,6 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
             HasKey(x => x.Id);
 
             Property(f => f.TipoCombustivel)
-                .HasMaxLength(100)
                 .IsRequired();
 
             Property(f => f.Valor)

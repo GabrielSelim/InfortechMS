@@ -25,10 +25,12 @@ namespace Infortechms.Gerenciamento.Business.Models.Veiculos.Validations
 
             RuleFor(f => f.VolumeTanque)
                 .NotEmpty()
+                .GreaterThan(0)
                 .WithMessage("O campo {PropertyValue} precisa ser fornecido");
 
             RuleFor(f => f.MediaConsumo)
                 .NotEmpty()
+                .GreaterThan(0)
                 .WithMessage("O campo {PropertyValue} precisa ser fornecido");
 
             RuleFor(f => f.Fk_Consumidor)

@@ -8,6 +8,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Abastecimentos.Validations
         {
             RuleFor(f => f.QuantidadeLitros)                
                 .NotEmpty()
+                .GreaterThan(0)
                 .WithMessage("O campo {PropertyValue} precisa ser fornecido");
         }
     }

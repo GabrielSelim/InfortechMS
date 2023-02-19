@@ -14,7 +14,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Combustiveis
     {
         public Guid Id { get; set; }
         public decimal Valor { get; set; }
-        public string TipoCombustivel { get; set; }
+        public TipoCombustivel TipoCombustivel { get; set; }
         public int Pureza { get; set; }
 
 
