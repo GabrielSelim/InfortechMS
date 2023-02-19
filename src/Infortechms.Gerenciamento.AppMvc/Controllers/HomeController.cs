@@ -10,8 +10,6 @@ namespace Infortechms.Gerenciamento.AppMvc.Controllers
 {
     public class HomeController : Controller
     {
-        private IRodarVeiculoService rodarVeiculoService;
-
         public ActionResult Index()
         {
             return View();            
@@ -29,12 +27,6 @@ namespace Infortechms.Gerenciamento.AppMvc.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
-        }
-
-
-        public void CriarViewBagAbastecer()
-        {
-
         }
     }
 }

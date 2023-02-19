@@ -9,7 +9,6 @@ namespace Infortechms.Gerenciamento.Business.Models.ConsumoCombustivel
 {
     public class ConsumoCombustivel : Entity
     {
-        public Guid id { get; set; }
         public string NumeroSerie { get; set; }
         public string Nome { get; set; }
         public decimal CapacidadeCombustivel { get; set; }

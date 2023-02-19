@@ -12,12 +12,12 @@ namespace Infortechms.Gerenciamento.infra.Data.Repository
 {
     public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
     {
-        protected readonly InfortechMSContext Db;
+        protected readonly ProjetoSalarioSContext Db;
         protected readonly DbSet<TEntity> Dbset;
 
         protected Repository()
         {
-            Db = new InfortechMSContext();
+            Db = new ProjetoSalarioSContext();
             Dbset = Db.Set<TEntity>();
         }
 

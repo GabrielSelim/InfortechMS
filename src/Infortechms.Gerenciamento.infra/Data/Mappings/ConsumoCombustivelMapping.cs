@@ -12,7 +12,7 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
     {
         public ConsumoCombustivelMapping()
         {
-            HasKey(f => f.id);
+            HasKey(f => f.Id);
 
             Property(p => p.Nome)
                 .IsRequired()

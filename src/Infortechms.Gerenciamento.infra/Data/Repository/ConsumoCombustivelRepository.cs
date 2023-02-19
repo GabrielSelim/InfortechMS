@@ -8,12 +8,13 @@ using Infortechms.Gerenciamento.Business.Models.ConsumoCombustivel;
 
 namespace Infortechms.Gerenciamento.infra.Data.Repository
 {
-    public abstract class ConsumoCombustivelRepository : Repository<ConsumoCombustivel>, IConsumoCombustivelRepository
+    public class ConsumoCombustivelRepository : Repository<ConsumoCombustivel>, IConsumoCombustivelRepository
     {
         public async Task<ConsumoCombustivel> ObterCombustivelPorId(Guid id)
         {
-            return await Db.ConsumoCombustivel
-                .AsNoTracking().FirstOrDefaultAsync(f => f.id);
+            return await Db.ConsumoCombustivels
+                .AsNoTracking()
+                .FirstOrDefaultAsync(f => f.Id == id);
         }
     }
 }
