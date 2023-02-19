@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Infortechms.Gerenciamento.infra.Data.Repository
 {
-    public abstract class ConsumidorRepository : Repository<Consumidor>, IConsumidorRepository
+    public class ConsumidorRepository : Repository<Consumidor>, IConsumidorRepository
     {
         public async Task<Consumidor> ObterConsumidorPorID(Guid id)
         {

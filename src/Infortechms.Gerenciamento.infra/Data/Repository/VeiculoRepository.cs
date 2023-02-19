@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Infortechms.Gerenciamento.infra.Data.Repository
 {
-    public abstract class VeiculoRepository : Repository<Veiculo>, IVeiculoRepository
+    public class VeiculoRepository : Repository<Veiculo>, IVeiculoRepository
     {
         public Veiculo ObterVeiculoPelaPlacaCerto(string placa)
         {
