@@ -1,4 +1,5 @@
-﻿using Infortechms.Gerenciamento.Business.Models.ConsumoCombustivel;
+﻿using Infortechms.Gerenciamento.Business.Core.Notificacoes;
+using Infortechms.Gerenciamento.Business.Models.ConsumoCombustivel;
 using Infortechms.Gerenciamento.Business.Models.ConsumoCombustivel.Validations;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,8 @@ namespace Infortechms.Gerenciamento.Business.Core.Services
     {
         private readonly IConsumoCombustivelRepository _consumoCombustivelRepository;
 
-        public ConsumoCombustivelService(IConsumoCombustivelRepository consumoCombustivelRepository)
+        public ConsumoCombustivelService(IConsumoCombustivelRepository consumoCombustivelRepository,
+                                         INotificador notificador) : base(notificador)
         {
             _consumoCombustivelRepository = consumoCombustivelRepository;
         }

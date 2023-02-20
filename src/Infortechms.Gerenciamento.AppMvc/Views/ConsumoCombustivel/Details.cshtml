@@ -1,0 +1,50 @@
+﻿@model Infortechms.Gerenciamento.AppMvc.ViewModels.ConsumoCombustivelViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ConsumoCombustivelViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroSerie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroSerie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CapacidadeCombustivel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CapacidadeCombustivel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CombustivelAtual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CombustivelAtual)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

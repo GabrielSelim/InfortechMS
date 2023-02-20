@@ -15,9 +15,9 @@ namespace Infortechms.Gerenciamento.infra.Data.Repository
         protected readonly ProjetoSalarioSContext Db;
         protected readonly DbSet<TEntity> Dbset;
 
-        protected Repository()
+        protected Repository(ProjetoSalarioSContext db)
         {
-            Db = new ProjetoSalarioSContext();
+            Db = db;
             Dbset = Db.Set<TEntity>();
         }
 

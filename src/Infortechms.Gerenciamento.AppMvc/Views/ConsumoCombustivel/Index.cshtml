@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Infortechms.Gerenciamento.AppMvc.ViewModels.ConsumoCombustivelViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroSerie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CapacidadeCombustivel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CombustivelAtual)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroSerie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CapacidadeCombustivel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CombustivelAtual)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Correr", "Correr", new { id = item.id }) |
+            @Html.ActionLink("Visualizar", "Details", new { id = item.id }) |
+            @Html.ActionLink("Excluir", "Delete", new { id = item.id })
+        </td>
+    </tr>
+}
+
+</table>

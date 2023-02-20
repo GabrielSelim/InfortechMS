@@ -19,7 +19,6 @@ namespace Infortechms.Gerenciamento.Business.Models.ConsumoCombustivel.Validatio
             RuleFor(f => f.Nome)
                 .NotEmpty()
                 .WithMessage("O campo {PropertyName} precisa ser fornecido");
-
             RuleFor(f => f.NumeroSerie)
                 .NotEmpty()
                 .WithMessage("O campo {PropertyName} precisa ser fornecido");
