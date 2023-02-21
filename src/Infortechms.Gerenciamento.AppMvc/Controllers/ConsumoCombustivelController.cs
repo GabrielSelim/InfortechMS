@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using Infortechms.Gerenciamento.AppMvc.Models;
+﻿using AutoMapper;
 using Infortechms.Gerenciamento.AppMvc.ViewModels;
-using Infortechms.Gerenciamento.Business.Models.ConsumoCombustivel;
 using Infortechms.Gerenciamento.Business.Core.Services;
-using Infortechms.Gerenciamento.infra.Data.Repository;
-using Infortechms.Gerenciamento.Business.Core.Notificacoes;
-using AutoMapper;
+using Infortechms.Gerenciamento.Business.Models.ConsumoCombustivel;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace Infortechms.Gerenciamento.AppMvc.Controllers
 {
@@ -100,7 +92,7 @@ namespace Infortechms.Gerenciamento.AppMvc.Controllers
                 }
             }
             else
-            {
+            {     
                 return RedirectToAction("Index");
             }
             return View(consumoCombustivelViewModel);
@@ -133,53 +125,6 @@ namespace Infortechms.Gerenciamento.AppMvc.Controllers
             }
             return View(consumoCombustivelViewModel);
         }
-
-        //[Route("obter-correr-consumo-combustivel/{id:Guid}")]
-        //public async Task<ActionResult> ObterCorrerConsumoCombustivel(Guid id)
-        //{
-        //    var correrConsumoCombustivel = await ObterConsumoCombustivel(id);
-        //    if (correrConsumoCombustivel == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return PartialView("CorrerDetalhes", correrConsumoCombustivel);
-        //}
-
-
-        //[Route("atualiza-grid-consumo-combustivel/{id:Guid}")]
-        //[HttpPost]
-        //public async Task<ActionResult> AtualizarGrid(ConsumoCombustivelViewModel consumoCombustivelViewModel)
-        //{
-        //    ModelState.Remove("Nome");
-        //    ModelState.Remove("CapacidadeCombustivel");
-        //    ModelState.Remove("NumeroSerie");
-
-        //    if (!ModelState.IsValid) return PartialView("CorrerDetalhes", consumoCombustivelViewModel);
-
-        //    await _consumoCombustivelService.Atualizar(_mapper.Map<ConsumoCombustivel>(consumoCombustivelViewModel));
-
-        //    var url = Url.Action("ObterCorrerConsumoCombustivel", "ConsumoCombustivel", new { id = consumoCombustivelViewModel.id });
-        //    return Json(new { success = true, url });
-        //}
-
-        //[Route("correr-consumo-combustivel/{id:guid}")]
-        //[HttpGet]
-        //public async Task<ActionResult> CorrerDetalhes(Guid id)
-        //{
-        //    var consumoCombustivelViewModel = await ObterConsumoCombustivel(id);
-
-        //    if (consumoCombustivelViewModel == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-
-        //    return PartialView("CorrerDetalhes", new ConsumoCombustivelViewModel {id = consumoCombustivelViewModel.id, 
-        //        Nome = consumoCombustivelViewModel.Nome, 
-        //        CapacidadeCombustivel = consumoCombustivelViewModel.CapacidadeCombustivel, 
-        //        CombustivelAtual = consumoCombustivelViewModel.CombustivelAtual, 
-        //        NumeroSerie = consumoCombustivelViewModel.NumeroSerie
-        //    });
-        //}
 
         [Route("excluir-consumo-combustivel/{id:guid}")]
         [HttpGet]

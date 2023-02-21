@@ -1614,8 +1614,9 @@ $.validator.methods.date = function (value, element) {
 	return this.optional(element) || !/Invalid|NaN/.test(new Date(date[2], date[1], date[0]).toString());
 }
 
-
-
+if ($('#CapacidadeCombustivel').val() < $('#CombustivelAtual').val()) {
+	alert("O campo Combustivel Atual não pode ser maior que a Capacidade de Combustivel")
+}
 
 
 

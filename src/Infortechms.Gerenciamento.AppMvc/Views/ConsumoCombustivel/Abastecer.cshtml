@@ -7,10 +7,10 @@
 <h2>Abastecer</h2>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Abastecer", "ConsumoCombustivel", FormMethod.Post, new { id = "consumoCombustivelForm" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>
             Digite a quantidade de Litros que deseja Inserir no Tanque.
@@ -20,7 +20,7 @@
         @Html.HiddenFor(model => model.id)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NumeroSerie, htmlAttributes: new { @class = "control-label col-md-2"   })
+            @Html.LabelFor(model => model.NumeroSerie, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NumeroSerie, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.NumeroSerie, "", new { @class = "text-danger" })
@@ -65,4 +65,30 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+
+        //if ($('#CapacidadeCombustivel').val() < $('#CombustivelAtual').val()) {
+        //    alert("O campo Combustivel Atual não pode ser maior que a Capacidade de Combustivel")
+        //}
+
+        $('#consumoCombustivelForm').submit(function () {
+            const litros = $('#CapacidadeCombustivel').val();
+            $('#CapacidadeCombustivel').val(litros.replace(".", ","));
+        });
+        $('#CapacidadeCombustivel').attr("data-val-number", "Litros em formato invalido");
+
+        $('#consumoCombustivelForm').submit(function () {
+            const litros = $('#CombustivelAtual').val();
+            $('#CombustivelAtual').val(litros.replace(".", ","));
+        });
+        $('#CombustivelAtual').attr("data-val-number", "Litros em formato invalido");
+
+        $('#NumeroSerie').prop('readonly', 'readonly')
+        $('#Nome').prop('readonly', 'readonly')
+        $('#CapacidadeCombustivel').prop('readonly', 'readonly')
+
+    </script>
+
+
 }
