@@ -22,6 +22,10 @@ namespace Infortechms.Gerenciamento.Business.Models.ConsumoCombustivel.Validatio
             RuleFor(f => f.NumeroSerie)
                 .NotEmpty()
                 .WithMessage("O campo {PropertyName} precisa ser fornecido");
+
+            RuleFor(f => f.CapacidadeCombustivel >= f.CombustivelAtual)
+                .NotEmpty()
+                .WithMessage("O Combustivel Atual não pode ser maior que a Capacidade do Tanque");
         }
     }
 }

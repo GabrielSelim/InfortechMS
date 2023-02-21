@@ -50,7 +50,7 @@ namespace Infortechms.Gerenciamento.infra.Data.Repository
 
         public virtual async Task Remover(Guid id)
         {
-            Db.Entry(new TEntity{Id = id}).State = EntityState.Deleted;
+            Dbset.Remove(await Dbset.FindAsync(id));
             await SaveChanges();
         }
 

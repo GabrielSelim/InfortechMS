@@ -1,10 +1,10 @@
 ﻿@model Infortechms.Gerenciamento.AppMvc.ViewModels.ConsumoCombustivelViewModel
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Abastecer";
 }
 
-<h2>Edit</h2>
+<h2>Abastecer</h2>
 
 
 @using (Html.BeginForm())
@@ -12,13 +12,15 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>ConsumoCombustivelViewModel</h4>
+        <h4>
+            Digite a quantidade de Litros que deseja Inserir no Tanque.
+        </h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.id)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NumeroSerie, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.NumeroSerie, htmlAttributes: new { @class = "control-label col-md-2"   })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NumeroSerie, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.NumeroSerie, "", new { @class = "text-danger" })
@@ -51,14 +53,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Salvar" class="btn btn-default" />
+                <input type="submit" value="Abastecer" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar a Lista", "Index")
 </div>
 
 @section Scripts {

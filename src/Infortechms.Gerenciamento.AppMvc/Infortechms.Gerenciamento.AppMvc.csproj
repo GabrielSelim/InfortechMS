@@ -185,6 +185,7 @@
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CultureConfig.cs" />
     <Compile Include="App_Start\DependencyInjectionConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -195,6 +196,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\VeiculoController.cs" />
+    <Compile Include="Extensions\litrosAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -227,6 +229,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\site.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -265,13 +268,14 @@
     <Content Include="Views\ConsumoCombustivel\Create.cshtml" />
     <Content Include="Views\ConsumoCombustivel\Delete.cshtml" />
     <Content Include="Views\ConsumoCombustivel\Details.cshtml" />
-    <Content Include="Views\ConsumoCombustivel\Edit.cshtml" />
+    <Content Include="Views\ConsumoCombustivel\Abastecer.cshtml" />
     <Content Include="Views\ConsumoCombustivel\Index.cshtml" />
     <Content Include="Views\ConsumoCombustivel\Correr.cshtml" />
+    <Content Include="Views\ConsumoCombustivel\CorrerDetalhes.cshtml" />
+    <Content Include="Views\ConsumoCombustivel\CorrerDE.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

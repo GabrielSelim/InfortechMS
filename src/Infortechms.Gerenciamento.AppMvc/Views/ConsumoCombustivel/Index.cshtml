@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Teste do Gabriel Sanz</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Criar um Usuario", "Create")
 </p>
 <table class="table">
     <tr>
@@ -26,27 +26,47 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumeroSerie)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CapacidadeCombustivel)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CombustivelAtual)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
-            @Html.ActionLink("Correr", "Correr", new { id = item.id }) |
-            @Html.ActionLink("Visualizar", "Details", new { id = item.id }) |
-            @Html.ActionLink("Excluir", "Delete", new { id = item.id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroSerie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CapacidadeCombustivel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CombustivelAtual)
+            </td>
+            <td>
+                <a class="btn btn-warning" href="@Url.Action("Correr", "ConsumoCombustivel", new { id = item.id })">Correr</a>
+                <a class="btn btn-success" href="@Url.Action("Details", "ConsumoCombustivel", new { id = item.id })">Visualizar</a>
+                <a class="btn btn-info" href="@Url.Action("Abastecer", "ConsumoCombustivel", new { id = item.id })">Abastecer</a>
+                <a class="btn btn-danger" href="@Url.Action("Delete", "ConsumoCombustivel", new { id = item.id })">Excluir</a>
+            </td>
+        </tr>
+    }
 
 </table>
+
+@*<div id="myModal" class="modal fade in">
+    <div class="modal=dialog">
+        <div class="modal-content">
+            <div id="myModalContent"></div>
+        </div>
+    </div>
+</div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @*@Scripts.Render("~/bundles/site")*@
+
+    @*<script>
+        $(document).ready(function () {
+            SetModal();
+        });
+    </script>*@
+}

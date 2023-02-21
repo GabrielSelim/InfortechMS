@@ -1,18 +1,18 @@
 ﻿@model Infortechms.Gerenciamento.AppMvc.ViewModels.ConsumoCombustivelViewModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Criar novo Consumo";
 }
 
-<h2>Create</h2>
+<h2>Criar Novo Consumo</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create", "ConsumoCombustivel", FormMethod.Post, new { id = "consumoCombustivelForm" }))
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>ConsumoCombustivelViewModel</h4>
+        <h4></h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -49,18 +49,32 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Criar" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar para Lista", "Index")
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        $('#consumoCombustivelForm').submit(function () {
+            const litros = $('#CapacidadeCombustivel').val();
+            $('#CapacidadeCombustivel').val(litros.replace(".", ","));
+        });
+        $('#CapacidadeCombustivel').attr("data-val-number", "Litros em formato invalido");
+
+        $('#consumoCombustivelForm').submit(function () {
+            const litros = $('#CombustivelAtual').val();
+            $('#CombustivelAtual').val(litros.replace(".", ","));
+        });
+        $('#CombustivelAtual').attr("data-val-number", "Litros em formato invalido");
+    </script>
 
 
 
