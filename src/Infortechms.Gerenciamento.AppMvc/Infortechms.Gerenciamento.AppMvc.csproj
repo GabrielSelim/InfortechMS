@@ -273,6 +273,7 @@
     <Content Include="Views\ConsumoCombustivel\Correr.cshtml" />
     <Content Include="Views\ConsumoCombustivel\CorrerDetalhes.cshtml" />
     <Content Include="Views\ConsumoCombustivel\CorrerDE.cshtml" />
+    <Content Include="Views\Shared\_ErrorSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

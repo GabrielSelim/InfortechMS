@@ -53,12 +53,20 @@ namespace Infortechms.Gerenciamento.AppMvc.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(ConsumoCombustivelViewModel consumoCombustivelViewModel)
         {
-            if (ModelState.IsValid)
+            if (consumoCombustivelViewModel.CombustivelAtual <= consumoCombustivelViewModel.CapacidadeCombustivel)
             {
-                await _consumoCombustivelService.Adicionar(_mapper.Map<ConsumoCombustivel>(consumoCombustivelViewModel));
+                if (ModelState.IsValid)
+                {
+                    await _consumoCombustivelService.Adicionar(_mapper.Map<ConsumoCombustivel>(consumoCombustivelViewModel));
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
+                }
             }
+            else
+            {
+                ModelState.AddModelError(string.Empty, "O campo Combustivel Atual não pode ser maior que a Capacidade");
+            }
+
 
             return View(consumoCombustivelViewModel);
         }
@@ -92,8 +100,8 @@ namespace Infortechms.Gerenciamento.AppMvc.Controllers
                 }
             }
             else
-            {     
-                return RedirectToAction("Index");
+            {
+                ModelState.AddModelError(string.Empty, "O campo Combustivel Atual não pode ser maior que a Capacidade");
             }
             return View(consumoCombustivelViewModel);
         }
@@ -116,13 +124,21 @@ namespace Infortechms.Gerenciamento.AppMvc.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Correr(ConsumoCombustivelViewModel consumoCombustivelViewModel)
         {
-            if (ModelState.IsValid)
+            if(consumoCombustivelViewModel.CombustivelAtual == 0)
             {
-                consumoCombustivelViewModel.CapacidadeCombustivel = consumoCombustivelViewModel.CapacidadeCombustivel;
-                consumoCombustivelViewModel.CombustivelAtual = 0;
-                await _consumoCombustivelService.Atualizar(_mapper.Map<ConsumoCombustivel>(consumoCombustivelViewModel));
-                return RedirectToAction("Index");
+                ModelState.AddModelError(string.Empty, "Não é possivel correr com Combustivel zerado, abasteça antes.");
             }
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    consumoCombustivelViewModel.CapacidadeCombustivel = consumoCombustivelViewModel.CapacidadeCombustivel;
+                    consumoCombustivelViewModel.CombustivelAtual = 0;
+                    await _consumoCombustivelService.Atualizar(_mapper.Map<ConsumoCombustivel>(consumoCombustivelViewModel));
+                    return RedirectToAction("Index");
+                }
+            }
+
             return View(consumoCombustivelViewModel);
         }
 
