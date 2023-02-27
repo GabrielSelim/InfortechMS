@@ -10,7 +10,12 @@ namespace Infortechms.Gerenciamento.Business.Models.Cargos
 {
     public class Cargo : Entity
     {
-        public Funcionario Fk_Funcionario { get; set; }
+        public Guid Fk_Funcionario { get; set; }
         public string NomeCargo { get; set; }
+
+
+        /* EF Relations */
+        public Funcionario Funcionario { get; set; }
+
     }
 }

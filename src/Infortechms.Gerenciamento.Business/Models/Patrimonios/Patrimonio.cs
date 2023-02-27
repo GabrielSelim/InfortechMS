@@ -11,7 +11,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Patrimonios
 {
     public class Patrimonio : Entity
     {
-        public Aquisicao Fk_Aquisicao { get; set; }
+        public Guid Fk_Aquisicao { get; set; }
         public int NumeroPatrimonio { get; set; }
         public string Descricao { get; set; }
         public string Marca { get; set; }
@@ -21,7 +21,10 @@ namespace Infortechms.Gerenciamento.Business.Models.Patrimonios
         public bool Status { get; set; }
 
 
-        /* EF Relations */
-        public FuncionarioPatrimonio FuncionarioPatrimonio { get; set; }
+        /* EF Relations */ 
+        public ICollection<FuncionarioPatrimonio> FuncionariosPatrimonios { get; set; }
+
+        /* EF Relations fk */
+        public Aquisicao Aquisicao { get; set; }
     }
 }

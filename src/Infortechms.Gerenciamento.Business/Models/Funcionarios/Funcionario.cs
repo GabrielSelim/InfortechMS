@@ -4,17 +4,18 @@ using Infortechms.Gerenciamento.Business.Models.Cargos;
 using Infortechms.Gerenciamento.Business.Models.Enum;
 using Infortechms.Gerenciamento.Business.Models.FuncionariosPatrimonios;
 using System;
+using System.Collections.Generic;
 
 namespace Infortechms.Gerenciamento.Business.Models.Funcionarios
 {
     public class Funcionario : Entity
     {
         public string Nome { get; set; }
+        public Endereco FK_Endereco { get; set; }
         public int CPF { get; set; }
         public int RG { get; set; }
         public int Telefone { get; set; }
         public int NitPis { get; set; }
-        public Endereco FK_Endereco { get; set; }
         public DateTime DataNascimento { get; set; }
         public decimal QuantidadeLitros { get; set; }
         public DateTime DataAdmissao { get; set; }
@@ -25,8 +26,10 @@ namespace Infortechms.Gerenciamento.Business.Models.Funcionarios
 
 
         /* EF Relations */
-        public Aquisicao Aquisicao { get; set; }
+        public ICollection<Aquisicao> Aquisicoes { get; set; }
         public Cargo Cargo { get; set; }
-        public FuncionarioPatrimonio FuncionarioPatrimonio { get; set; }
+        public ICollection<FuncionarioPatrimonio> FuncionariosPatrimonios { get; set; }
+
+        /* EF Relations fk*/
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Infortechms.Gerenciamento.Business.Core.Models;
 using Infortechms.Gerenciamento.Business.Models.Aquisicoes;
+using System.Collections.Generic;
 
 namespace Infortechms.Gerenciamento.Business.Models.Fornecedores
 {
@@ -11,6 +12,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Fornecedores
         public string Email { get; set; }
 
         /* EF Relations */
-        public Aquisicao Aquisicao { get; set; }
+        public ICollection<Aquisicao> Aquisicao { get; set; }
     }
 }

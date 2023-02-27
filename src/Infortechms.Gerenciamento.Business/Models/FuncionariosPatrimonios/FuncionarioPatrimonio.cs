@@ -12,14 +12,14 @@ namespace Infortechms.Gerenciamento.Business.Models.FuncionariosPatrimonios
 {
     public class FuncionarioPatrimonio : Entity
     {
-        public Funcionario Fk_Funcionario { get; set; }
-        public Patrimonio Fk_Patrimonio { get; set; }
-        public int DataDestinação { get; set; }
+        public Guid Fk_Funcionario { get; set; }
+        public Guid Fk_Patrimonio { get; set; }
+        public DateTime DataDestinação { get; set; }
         public local LocalPatrimonio { get; set; }
 
 
-        /* EF Relations */
-
-
+        /* EF Relations fk*/
+        public Funcionario Funcionarios { get; set; }
+        public Patrimonio Patrimonios { get; set; }
     }
 }
