@@ -49,8 +49,10 @@
     <Compile Include="Core\Validations\Documentos\ValidacaoDocs.cs" />
     <Compile Include="Models\Aquisicoes\Aquisicao.cs" />
     <Compile Include="Models\Aquisicoes\IAquisicaoRepository.cs" />
+    <Compile Include="Models\Aquisicoes\Validations\AquisicaoValidation.cs" />
     <Compile Include="Models\Cargos\Cargo.cs" />
     <Compile Include="Models\Cargos\ICargoRepository.cs" />
+    <Compile Include="Models\Cargos\Validations\CargoValidation.cs" />
     <Compile Include="Models\ConsumoCombustivel\ConsumoCombustivel.cs" />
     <Compile Include="Models\ConsumoCombustivel\IConsumoCombustivelRepository.cs" />
     <Compile Include="Models\ConsumoCombustivel\Validations\ConsumoCombustivelValidation.cs" />
@@ -65,15 +67,13 @@
     <Compile Include="Models\Funcionarios\Funcionario.cs" />
     <Compile Include="Models\Funcionarios\IEnderecoRepository.cs" />
     <Compile Include="Models\Funcionarios\IFuncionarioRepository.cs" />
+    <Compile Include="Models\Funcionarios\Validations\FuncionarioValidation.cs" />
     <Compile Include="Models\Patrimonios\IPatrimonioRepository.cs" />
     <Compile Include="Models\Patrimonios\Patrimonio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Aquisicoes\Validations\" />
-    <Folder Include="Models\Cargos\Validations\" />
     <Folder Include="Models\FuncionariosPatrimonios\Validations\" />
-    <Folder Include="Models\Funcionarios\Validations\" />
     <Folder Include="Models\Patrimonios\Validations\" />
   </ItemGroup>
   <ItemGroup>
