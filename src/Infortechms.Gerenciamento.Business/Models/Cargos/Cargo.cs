@@ -1,4 +1,5 @@
 ﻿using Infortechms.Gerenciamento.Business.Core.Models;
+using Infortechms.Gerenciamento.Business.Models.Cargos.Validations;
 using Infortechms.Gerenciamento.Business.Models.Funcionarios;
 using System;
 using System.Collections.Generic;
@@ -17,5 +18,11 @@ namespace Infortechms.Gerenciamento.Business.Models.Cargos
         /* EF Relations */
         public Funcionario Funcionario { get; set; }
 
+        public bool Validacao()
+        {
+            var validacao = new CargoValidation();
+            var resultado = validacao.Validate(this);
+            return resultado.IsValid;
+        }
     }
 }

@@ -19,11 +19,11 @@ namespace Infortechms.Gerenciamento.Business.Models.Aquisicoes.Validations
 
             RuleFor(f => f.ValorNF)
                 .NotEmpty()
-                .WithMessage("O campo {PropertyName} precisa ser fornecido");
+                .WithMessage("O campo {PropertyValue} precisa ser fornecido");
 
-            RuleFor(f => f.Email)
+            RuleFor(f => f.DataAquisicao)
                 .NotEmpty()
-                .WithMessage("O campo {PropertyName} precisa ser fornecido");
+                .WithMessage("O campo {PropertyValue} precisa ser fornecido");
         }
     }
 }
