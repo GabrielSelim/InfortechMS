@@ -1,17 +1,34 @@
 ﻿using Infortechms.Gerenciamento.Business.Models.Funcionarios;
+using Infortechms.Gerenciamento.Business.Core.Notificacoes;
+using Infortechms.Gerenciamento.Business.Models.Funcionarios.Validations;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Infortechms.Gerenciamento.Business.Core.Services
 {
-    public class FuncionarioService : IFuncionarioService
+    public class FuncionarioService : BaseService, IFuncionarioService
     {
-        public Task Adicionar(Funcionario funcionario)
+        private readonly IFuncionarioRepository _funcionarioRepository;
+        private readonly IEnderecoRepository _enderecoRepository ;
+
+        public FuncionarioService(IFuncionarioRepository funcionarioRepository,
+                                 IEnderecoRepository enderecoRepository,
+                                 INotificador notificador) : base(notificador)
         {
-            throw new NotImplementedException();
+            _funcionarioRepository = funcionarioRepository;
+            _enderecoRepository = enderecoRepository;
+        }
+
+        public async Task Adicionar(Funcionario funcionario)
+        {
+            if (!ExecutarValidacao(new FuncionarioValidation(), funcionario)
+            || !ExecutarValidacao(new EnderecoValidation(), funcionario.FK_Endereco)) return;
+
+            if (await FuncionarioExistente(funcionario)) return;
+
+            await _funcionarioRepository.Adicionar(funcionario);
+
         }
 
         public Task Atualizar(Funcionario funcionario)
@@ -27,6 +44,12 @@ namespace Infortechms.Gerenciamento.Business.Core.Services
         public Task AtualizarEndereco(Endereco endereco)
         {
             throw new NotImplementedException();
+        }
+
+        private async Task<bool> FuncionarioExistente(Funcionario funcionario)
+        {
+            var funcionarioAtual = await _funcionarioRepository.Buscar(f => f.CPF == funcionario.CPF && f.Id != funcionario.Id);
+            return funcionarioAtual.Any();
         }
 
         public void Dispose()
