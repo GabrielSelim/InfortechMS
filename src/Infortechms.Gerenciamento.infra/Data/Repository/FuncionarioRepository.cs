@@ -21,5 +21,25 @@ namespace Infortechms.Gerenciamento.infra.Data.Repository
         {
             throw new NotImplementedException();
         }
+
+        public Task<Funcionario> ObterFuncionarioPorCargo(Guid fk_cargo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Funcionario> ObterFuncionarioPorLocal(int local)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Funcionario> ObterFuncionarioPorStatus(bool status)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Funcionario> ObterFuncionarioPorTipoContrato(int tipoContrato)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

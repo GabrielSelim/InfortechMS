@@ -11,5 +11,9 @@ namespace Infortechms.Gerenciamento.Business.Models.Funcionarios
     {
         Task<Funcionario> ObterFuncionarioEndereco(Guid id);
         Task<Funcionario> ObterFuncionarioPatrimonioEndereco(Guid id);
+        Task<Funcionario> ObterFuncionarioPorCargo(Guid fk_cargo);
+        Task<Funcionario> ObterFuncionarioPorTipoContrato(int tipoContrato);
+        Task<Funcionario> ObterFuncionarioPorLocal(int local);
+        Task<Funcionario> ObterFuncionarioPorStatus(bool status);
     }
 }

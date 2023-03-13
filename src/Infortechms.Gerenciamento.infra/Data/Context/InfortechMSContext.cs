@@ -6,6 +6,8 @@ using Infortechms.Gerenciamento.Business.Models.ConsumoCombustivel;
 using Infortechms.Gerenciamento.Business.Models.ControlesFinanceiros;
 using Infortechms.Gerenciamento.Business.Models.Fornecedores;
 using Infortechms.Gerenciamento.Business.Models.Funcionarios;
+using Infortechms.Gerenciamento.Business.Models.FuncionariosPatrimonios;
+using Infortechms.Gerenciamento.Business.Models.Patrimonios;
 using Infortechms.Gerenciamento.infra.Data.Mappings;
 
 namespace Infortechms.Gerenciamento.infra.Data.Context
@@ -26,6 +28,9 @@ namespace Infortechms.Gerenciamento.infra.Data.Context
         public DbSet<ControleFinanceiro> ControleFinanceiros { get; set; }
         public DbSet<Fornecedor> Fornecedores { get; set; }
         public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<FuncionarioPatrimonio> FuncionarioPatrimonios { get; set; }
+        public DbSet<Patrimonio> Patrimonios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -44,6 +49,11 @@ namespace Infortechms.Gerenciamento.infra.Data.Context
             modelBuilder.Configurations.Add(new ControleFinanceiroMapping());
             modelBuilder.Configurations.Add(new FornecedorMapping());
             modelBuilder.Configurations.Add(new FuncionarioMapping());
+            modelBuilder.Configurations.Add(new EnderecoMapping());
+            modelBuilder.Configurations.Add(new FuncionarioPatrimonioMapping());
+            modelBuilder.Configurations.Add(new PatrimonioMapping());
+
+
 
             base.OnModelCreating(modelBuilder);
         }

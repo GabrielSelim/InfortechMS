@@ -59,13 +59,17 @@
     <Compile Include="Data\Mappings\EnderecoMapping.cs" />
     <Compile Include="Data\Mappings\FornecedorMapping.cs" />
     <Compile Include="Data\Mappings\FuncionarioMapping.cs" />
+    <Compile Include="Data\Mappings\FuncionarioPatrimonioMapping.cs" />
+    <Compile Include="Data\Mappings\PatrimonioMapping.cs" />
     <Compile Include="Data\Repository\AquisicaoRepository.cs" />
     <Compile Include="Data\Repository\CargoRepository.cs" />
     <Compile Include="Data\Repository\ConsumoCombustivelRepository.cs" />
     <Compile Include="Data\Repository\ControleFinanceiroRepository.cs" />
     <Compile Include="Data\Repository\EnderecoRepository.cs" />
     <Compile Include="Data\Repository\FornecedorRepository.cs" />
+    <Compile Include="Data\Repository\FuncionarioPatrimonioRepository.cs" />
     <Compile Include="Data\Repository\FuncionarioRepository.cs" />
+    <Compile Include="Data\Repository\PatrimonioRepository.cs" />
     <Compile Include="Data\Repository\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
