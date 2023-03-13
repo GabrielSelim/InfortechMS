@@ -28,18 +28,18 @@ namespace Infortechms.Gerenciamento.Business.Core.Services
             if (await FuncionarioExistente(funcionario)) return;
 
             await _funcionarioRepository.Adicionar(funcionario);
-
         }
 
-        public Task Atualizar(Funcionario funcionario)
+        public async Task Atualizar(Funcionario funcionario)
         {
-            throw new NotImplementedException();
+            if (!ExecutarValidacao(new FuncionarioValidation(), funcionario)
+            || !ExecutarValidacao(new EnderecoValidation(), funcionario.FK_Endereco)) return;
+
+            if (await FuncionarioExistente(funcionario)) return;
+
+            await _funcionarioRepository.Atualizar(funcionario);
         }
 
-        public Task Remover(Guid id)
-        {
-            throw new NotImplementedException();
-        }
 
         public Task AtualizarEndereco(Endereco endereco)
         {
@@ -54,7 +54,8 @@ namespace Infortechms.Gerenciamento.Business.Core.Services
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _funcionarioRepository?.Dispose();
+            _enderecoRepository?.Dispose();
         }
     }
 }

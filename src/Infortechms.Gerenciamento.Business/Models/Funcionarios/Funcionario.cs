@@ -16,6 +16,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Funcionarios
     {
         public string Nome { get; set; }
         public Endereco FK_Endereco { get; set; }
+        public Guid Fk_Cargo { get; set; }
         public string CPF { get; set; }
         public string RG { get; set; }
         public int Telefone { get; set; }

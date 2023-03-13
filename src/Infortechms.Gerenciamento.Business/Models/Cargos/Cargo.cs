@@ -11,7 +11,6 @@ namespace Infortechms.Gerenciamento.Business.Models.Cargos
 {
     public class Cargo : Entity
     {
-        public Guid Fk_Funcionario { get; set; }
         public string NomeCargo { get; set; }
 
 

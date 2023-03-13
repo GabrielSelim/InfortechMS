@@ -52,8 +52,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Context\InfortechMSContext.cs" />
+    <Compile Include="Data\Mappings\AquisicaoMapping.cs" />
+    <Compile Include="Data\Mappings\CargoMapping.cs" />
     <Compile Include="Data\Mappings\ConsumoCombustivelMapping.cs" />
+    <Compile Include="Data\Mappings\ControleFinanceiroMapping.cs" />
+    <Compile Include="Data\Mappings\EnderecoMapping.cs" />
+    <Compile Include="Data\Mappings\FornecedorMapping.cs" />
+    <Compile Include="Data\Mappings\FuncionarioMapping.cs" />
+    <Compile Include="Data\Repository\AquisicaoRepository.cs" />
+    <Compile Include="Data\Repository\CargoRepository.cs" />
     <Compile Include="Data\Repository\ConsumoCombustivelRepository.cs" />
+    <Compile Include="Data\Repository\ControleFinanceiroRepository.cs" />
+    <Compile Include="Data\Repository\EnderecoRepository.cs" />
+    <Compile Include="Data\Repository\FornecedorRepository.cs" />
+    <Compile Include="Data\Repository\FuncionarioRepository.cs" />
     <Compile Include="Data\Repository\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

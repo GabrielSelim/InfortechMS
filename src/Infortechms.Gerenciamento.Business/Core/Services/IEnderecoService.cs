@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace Infortechms.Gerenciamento.Business.Core.Services
 {
-    public interface IFuncionarioService : IDisposable
+    public interface IEnderecoService : IDisposable
     {
-        Task Adicionar(Funcionario funcionario);
-        Task Atualizar(Funcionario funcionario);
-
-        Task AtualizarEndereco(Endereco endereco);
+        Task Adicionar(Endereco endereco);
+        Task Atualizar(Endereco endereco);
     }
 }

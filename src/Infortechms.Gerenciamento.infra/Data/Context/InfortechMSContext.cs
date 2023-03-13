@@ -1,6 +1,11 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using Infortechms.Gerenciamento.Business.Models.Aquisicoes;
+using Infortechms.Gerenciamento.Business.Models.Cargos;
 using Infortechms.Gerenciamento.Business.Models.ConsumoCombustivel;
+using Infortechms.Gerenciamento.Business.Models.ControlesFinanceiros;
+using Infortechms.Gerenciamento.Business.Models.Fornecedores;
+using Infortechms.Gerenciamento.Business.Models.Funcionarios;
 using Infortechms.Gerenciamento.infra.Data.Mappings;
 
 namespace Infortechms.Gerenciamento.infra.Data.Context
@@ -16,6 +21,11 @@ namespace Infortechms.Gerenciamento.infra.Data.Context
         //Teste para Jean com finalidade de  Subir Cargo
 
         public DbSet<ConsumoCombustivel> ConsumoCombustivels { get; set; }
+        public DbSet<Aquisicao> Aquisicoes { get; set; }
+        public DbSet<Cargo> Cargos { get; set; }
+        public DbSet<ControleFinanceiro> ControleFinanceiros { get; set; }
+        public DbSet<Fornecedor> Fornecedores { get; set; }
+        public DbSet<Funcionario> Funcionarios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -29,6 +39,11 @@ namespace Infortechms.Gerenciamento.infra.Data.Context
                     .HasMaxLength(100));
 
             modelBuilder.Configurations.Add(new ConsumoCombustivelMapping());
+            modelBuilder.Configurations.Add(new AquisicaoMapping());
+            modelBuilder.Configurations.Add(new CargoMapping());
+            modelBuilder.Configurations.Add(new ControleFinanceiroMapping());
+            modelBuilder.Configurations.Add(new FornecedorMapping());
+            modelBuilder.Configurations.Add(new FuncionarioMapping());
 
             base.OnModelCreating(modelBuilder);
         }
