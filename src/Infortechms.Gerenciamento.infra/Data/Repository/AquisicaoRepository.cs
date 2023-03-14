@@ -12,10 +12,7 @@ namespace Infortechms.Gerenciamento.infra.Data.Repository
     {
         public AquisicaoRepository(ProjetoSalarioSContext context) : base(context) { }
 
-        public Task<Aquisicao> ObterAquisicaoPorData(DateTime dataAquisicao)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public Task<Aquisicao> ObterAquisicaoPorFornecedor(Guid fk_Fornecedor)
         {
@@ -27,7 +24,17 @@ namespace Infortechms.Gerenciamento.infra.Data.Repository
             throw new NotImplementedException();
         }
 
-        public Task<Aquisicao> ObterValorNFPorFuncionario(Guid fk_Funcionario)
+        public Task<IEnumerable<Aquisicao>> ObterAquisicoes()
+        {
+            throw new NotImplementedException();
+        }           
+
+        public async Task<IEnumerable<Aquisicao>> ObterAquisicaoPorData(DateTime dataAquisicao)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<Aquisicao>> ObterValorNFPorFuncionario(Guid fk_Funcionario)
         {
             throw new NotImplementedException();
         }
