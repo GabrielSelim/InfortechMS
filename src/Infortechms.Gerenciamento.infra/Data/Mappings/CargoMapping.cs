@@ -14,6 +14,9 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
         {
             HasKey(f => f.Id);
 
+            Property(p => p.NomeCargo)
+                .IsRequired()
+                .HasMaxLength(200);                       
 
             ToTable("Cargos");
         }

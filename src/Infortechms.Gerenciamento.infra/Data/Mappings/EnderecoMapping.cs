@@ -14,6 +14,30 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
         {
             HasKey(f => f.Id);
 
+            Property(c => c.Logradouro)
+                .IsRequired()
+                .HasMaxLength(200);
+
+            Property(c => c.Numero)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            Property(c => c.Cep)
+                .IsRequired()
+                .HasMaxLength(8)
+                .IsFixedLength();
+
+            Property(c => c.Complemento)
+                .HasMaxLength(250);
+
+            Property(c => c.Bairro)
+                .IsRequired();
+
+            Property(c => c.Cidade)
+                .IsRequired();
+
+            Property(c => c.Estado)
+                .IsRequired();
 
             ToTable("Enderecos");
         }

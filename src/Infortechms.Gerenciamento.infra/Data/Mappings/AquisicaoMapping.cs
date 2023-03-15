@@ -14,8 +14,26 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
         {
             HasKey(f => f.Id);
 
+            Property(p => p.NotaFiscal)
+                .IsRequired()
+                .HasMaxLength(200);
 
-            ToTable("Aquisicao");
+            Property(p => p.ValorNF)
+                .IsRequired();
+
+            HasRequired(f => f.Funcionarios)
+                .WithMany(p => p.Aquisicoes)
+                .HasForeignKey(f => f.Fk_Funcionario);
+
+            HasRequired(f => f.Fornecedores)
+                .WithMany(p => p.Aquisicao)
+                .HasForeignKey(f => f.Fk_Fornecedor);
+
+            Property(p => p.DataAquisicao)
+                .IsRequired();
+
+
+            ToTable("Aquisicoes");
         }
     }
 }

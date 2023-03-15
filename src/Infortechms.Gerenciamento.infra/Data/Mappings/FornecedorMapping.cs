@@ -14,6 +14,20 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
         {
             HasKey(f => f.Id);
 
+            Property(p => p.CNPJ)
+                .IsRequired()
+                .HasMaxLength(200);
+
+            Property(p => p.Nome)
+                .IsRequired()
+                .HasMaxLength(200);
+
+            Property(p => p.Telefone)
+                .IsRequired();
+
+            Property(p => p.Email)
+                .HasMaxLength(200);
+
 
             ToTable("Fonecedor");
         }

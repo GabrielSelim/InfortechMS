@@ -14,6 +14,21 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
         {
             HasKey(f => f.Id);
 
+            Property(p => p.SalarioBase)
+                .IsRequired();
+
+            Property(p => p.TotalLiquido)
+                .IsRequired();
+
+            Property(p => p.tipoProjeto)
+                .IsRequired();
+
+            Property(p => p.DataPagamento)
+                .IsRequired();
+
+            HasRequired(f => f.Funcionario)
+                .WithMany(p => p.ControleFinanceiros)
+                .HasForeignKey(f => f.Fk_Funcionario);
 
             ToTable("Controle Financeiro");
         }
