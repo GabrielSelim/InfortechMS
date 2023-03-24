@@ -14,6 +14,20 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
         {
             HasKey(f => f.Id);
 
+            HasRequired(f => f.Funcionarios)
+                .WithMany(p => p.FuncionariosPatrimonios)
+                .HasForeignKey(f => f.Fk_Funcionario);
+
+            HasRequired(f => f.Patrimonios)
+                .WithMany(p => p.FuncionariosPatrimonios)
+                .HasForeignKey(f => f.Fk_Patrimonio);
+
+            Property(p => p.DataDestinação)
+                .IsRequired();
+
+            Property(p => p.LocalPatrimonio)
+                .IsRequired();
+
 
             ToTable("Enderecos");
         }
