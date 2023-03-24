@@ -15,7 +15,7 @@ namespace Infortechms.Gerenciamento.Business.Models.Cargos
 
 
         /* EF Relations */
-        public Funcionario Funcionario { get; set; }
+        public ICollection<Funcionario> Funcionario { get; set; }
 
         public bool Validacao()
         {

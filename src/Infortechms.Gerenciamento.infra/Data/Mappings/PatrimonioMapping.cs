@@ -15,7 +15,7 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
             HasKey(f => f.Id);
 
 
-            ToTable("Enderecos");
+            ToTable("Patrimonios");
         }
     }
 }

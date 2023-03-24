@@ -44,6 +44,10 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
             HasRequired(f => f.FK_Endereco)
                 .WithRequiredPrincipal(e => e.Funcionario);
 
+            HasRequired(f => f.Cargo)
+                .WithMany(p => p.Funcionario)
+                .HasForeignKey(f => f.Fk_Cargo);
+
             ToTable("Funcionario");
         }
     }
