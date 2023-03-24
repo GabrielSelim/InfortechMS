@@ -29,7 +29,7 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
                 .IsRequired();
 
 
-            ToTable("Enderecos");
+            ToTable("FuncionarioPatrimonio");
         }
     }
 }

@@ -14,6 +14,31 @@ namespace Infortechms.Gerenciamento.infra.Data.Mappings
         {
             HasKey(f => f.Id);
 
+            HasRequired(f => f.Aquisicao)
+                .WithMany(p => p.Patrimonio)
+                .HasForeignKey(f => f.Fk_Aquisicao);
+
+            Property(p => p.NumeroPatrimonio)
+                .IsRequired();
+
+            Property(p => p.Descricao)
+                .IsRequired();
+
+            Property(p => p.Marca)
+                .IsRequired();
+
+            Property(p => p.DataCompra)
+                .IsRequired();
+
+            Property(p => p.DataGarantia)
+                .IsRequired();
+
+            Property(p => p.Valor)
+                .IsRequired();
+
+            Property(p => p.Status)
+                .IsRequired();
+
 
             ToTable("Patrimonios");
         }
